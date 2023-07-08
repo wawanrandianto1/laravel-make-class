@@ -1,9 +1,10 @@
 <?php
 
-namespace Hisman\MakeClass;
+namespace Wawan\MakeClass;
 
 use Illuminate\Support\ServiceProvider;
-use Hisman\MakeClass\Console\MakeClassCommand;
+use Wawan\MakeClass\Console\MakeClassCommand;
+use Wawan\MakeClass\Console\MakeInterfaceCommand;
 
 class MakeClassServiceProvider extends ServiceProvider
 {
@@ -16,6 +17,7 @@ class MakeClassServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([MakeClassCommand::class]);
+            $this->commands([MakeInterfaceCommand::class]);
         }
     }
 

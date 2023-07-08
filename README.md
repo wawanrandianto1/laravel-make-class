@@ -6,7 +6,7 @@ Artisan command for generating a new custom class in Laravel.
 
 Install the package via composer:
 ```
-composer require --dev hisman/laravel-make-class
+composer require --dev wawan/laravel-make-class
 ```
 
 If you're using Laravel < 5.5, you'll need to add the service provider to `config/app.php` file:
@@ -15,7 +15,7 @@ If you're using Laravel < 5.5, you'll need to add the service provider to `confi
 'providers' => [
     ...
 
-    Hisman\MakeClass\MakeClassServiceProvider::class,
+    Wawan\MakeClass\MakeClassServiceProvider::class,
 
     ...
 ]
@@ -32,4 +32,9 @@ php artisan make:class ClassName -c
 ```
 ```
 php artisan make:class ClassName --constructor
+
+
+To create a new interface, call the `make:interface` command from Artisan. Interface will be created under the `app` folder.
+```
+php artisan make:interface InterfaceName
 ```
